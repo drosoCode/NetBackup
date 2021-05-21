@@ -1,0 +1,23 @@
+git:
+  repo: https://USER:TOKEN@SERVER/USER/REPO.git
+  branch: master
+  folder: repo
+
+devices:
+  - file: pfsense.xml
+    address: 192.168.1.1
+    user: USER
+    password: PASSWORD
+    type: pfsense
+    enabled: true
+
+  - file: mikrotik_css.swb
+    address: 192.168.1.2
+    user: admin
+    password:
+    type: switchos
+    enabled: true
+
+settings:
+  cron: 0 3 1 * *
+
