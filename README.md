@@ -6,8 +6,9 @@
 - Build the container, mount the config file to /app/config.yml and run the container
 
 ## Supported Devices
-- pfSense
-- OPNsense
-- OpenWrt
-- Switch OS
-- D-Link Smart Managed Switches (tested with DGS-1100-08)
+- pfSense (SSH)
+- OPNsense (SSH)
+- OpenWrt (Web)
+- Switch OS (Web)
+- Router OS (SSH)
+- D-Link Smart Managed Switches (tested with DGS-1100-08) (Web)
