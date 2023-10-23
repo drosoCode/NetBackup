@@ -62,11 +62,14 @@ os.system(
     "cd " + config["git"]["folder"] + "&& git checkout " + config["git"]["branch"]
 )
 
-cron = croniter.croniter(config["settings"]["cron"], datetime.datetime.now())
+cron = None
+if config["settings"]["cron"] != "":
+    cron = croniter.croniter(config["settings"]["cron"], datetime.datetime.now())
 while True:
     # start a backup
     backup(providers, config["devices"], config["git"])
-
+    if cron is None:
+        break
     # sleep until next occurrence
     nxt = cron.get_next(datetime.datetime)
     print("Next backup:", nxt)
